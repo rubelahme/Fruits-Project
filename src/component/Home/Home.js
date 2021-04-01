@@ -5,7 +5,7 @@ const Home = () => {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/item")
+    fetch("https://apricot-cupcake-07787.herokuapp.com/item")
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
@@ -23,7 +23,7 @@ const Home = () => {
           )}
           {item.map((pd) => (
             <div className="col-md-3">
-              <HomeItem item={pd}></HomeItem>
+              <HomeItem key={pd.name} item={pd}></HomeItem>
             </div>
           ))}
         </div>

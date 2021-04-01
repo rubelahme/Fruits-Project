@@ -6,7 +6,9 @@ const Orders = () => {
   const [user, setUser] = useContext(createProvider);
   const [item, setItem] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:4000/orders?email=${user.email}`)
+    fetch(
+      `https://apricot-cupcake-07787.herokuapp.com/allOrders?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -27,7 +29,7 @@ const Orders = () => {
           )}
           {item.map((pd) => (
             <div className="col-md-4">
-              <AllOrders item={pd}></AllOrders>
+              <AllOrders key={pd.name} item={pd}></AllOrders>
             </div>
           ))}
         </div>

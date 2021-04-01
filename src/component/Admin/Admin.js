@@ -17,7 +17,7 @@ const Admin = () => {
       price: data.price,
       author_name: data.author_name,
     };
-    fetch("http://localhost:4000/product", {
+    fetch("https://apricot-cupcake-07787.herokuapp.com/product", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(eventData),
@@ -41,7 +41,7 @@ const Admin = () => {
       .catch(function (error) {});
   };
   useEffect(() => {
-    fetch("http://localhost:4000/item")
+    fetch("https://apricot-cupcake-07787.herokuapp.com/item")
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
@@ -128,7 +128,7 @@ const Admin = () => {
               <div className="row pt-2">
                 {item.map((pd) => (
                   <div className="col-md-12">
-                    <Manages data={pd}></Manages>
+                    <Manages key={pd.name} data={pd}></Manages>
                   </div>
                 ))}
               </div>

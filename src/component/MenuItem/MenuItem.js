@@ -10,7 +10,7 @@ const MenuItem = () => {
   const [menu, setMenu] = useState([]);
   console.log(setUser);
   useEffect(() => {
-    fetch("http://localhost:4000/items/" + name)
+    fetch("https://apricot-cupcake-07787.herokuapp.com/items/" + name)
       .then((res) => res.json())
       .then((data) => setMenu(data));
   }, [name]);
@@ -25,7 +25,7 @@ const MenuItem = () => {
       quantity: "1",
       date: new Date().toDateString("dd/MM/yyyy"),
     };
-    fetch("http://localhost:4000/order", {
+    fetch("https://apricot-cupcake-07787.herokuapp.com/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(eventData),

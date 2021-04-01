@@ -4,7 +4,7 @@ import "./manages.css";
 const Manages = (props) => {
   const { name, price, author_name, _id } = props.data;
   const handleDelate = (id) => {
-    fetch("http://localhost:4000/delete/" + id, {
+    fetch("https://apricot-cupcake-07787.herokuapp.com/delete/" + id, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -7,7 +7,7 @@ const Headers = () => {
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <Link class="navbar-brand" to="/">
-            Favorite Fruits
+            Combination of Fruits
           </Link>
           <button
             class="navbar-toggler"
