@@ -14,13 +14,13 @@ const Manages = (props) => {
     <div>
       <div className="row manages">
         <div className="col-md-3 p-2">
-          <h6>Fruit:{name}</h6>
+          <h6>{name}</h6>
         </div>
         <div className="col-md-3">
-          <h6>Price:{price}</h6>
+          <h6>{price}</h6>
         </div>
         <div className="col-md-3">
-          <h6>Author:{author_name}</h6>
+          <h6>{author_name}</h6>
         </div>
         <div className="col-md-3">
           <button onClick={() => handleDelate(_id)} className="bg-danger">

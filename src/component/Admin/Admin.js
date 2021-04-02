@@ -110,7 +110,7 @@ const Admin = () => {
             <div>
               <div className="row pt-1 bg-success text-light">
                 <div className="col-md-3 ">
-                  <h3>Fruit </h3>
+                  <h3>Fruits </h3>
                 </div>
 
                 <div className="col-md-3 ">
